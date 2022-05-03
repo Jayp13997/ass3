@@ -56,4 +56,51 @@ P(A | B) &= \frac{P(B | A) * P(A)}{P(B)} \\
 \end{align}
 \end{solution}
 
+\begin{problem}{2}
+Consider the Monty Hall problem that we discussed in class. Instead of having three
+doors with one door having a price, now suppose there are four doors with two doors hiding goats
+behind them and one door having a price behind it. The other door has nothing behind it. To play
+the game, the guest will pick a door and the host will then reveal another door with a goat behind.
+The guest can then choose whether to stick to the original choice or switching. Should the guest
+switch? What is the probability of winning if the guest switches?
+\end{problem}
+
+\begin{solution}
+Yes, the guest should still switch. Here's all the possible results for switching: \\
+Pick prize, switch to remaining goat \\
+Pick prize, switch to nothing \\
+Pick goat number one, switch to nothing \\
+Pick goat number one, switch to prize \\
+Pick goat number two, switch to nothing \\
+Pick goat number two, switch to prize \\
+Pick nothing, switch to remaining goat \\
+Pick nothing, switch to prize \\
+
+Here's all the possible results without switching: \\
+Pick prize \\
+Pick goat number one \\
+Pick goat number two \\
+Pick nothing \\
+
+As shown, switching will provide a $\frac{3}{8}$ chance to win as opposed to a $\frac{1}{4} = \frac{2}{8}$ chance at the start of the game.
+\end{solution}
+
+\begin{problem}{3}
+Consider the following Bayesian network, where variables A through E are all Boolean valued. \\
+a) What is the probability that all five of these Boolean variables are true? \\
+b) Compute P(A, E | B) (yes, this is a lot of work). \\
+c) Compute P(A = true | B = false, C = false, D = false, E = false). \\
+d) Compute P(C = true, D = false | B = false). \\
+e) Compute P(B = true, C = false, D = true | A = false).
+\end{problem}
+
+\begin{solution}
+a) 0.2 * 0.5 * 0.8 * 0.1 * 0.3 = .0024 \\
+b)  \\
+c) P(A = true | B = false, C = false, D = false, E = false) = P(A = true | B = false, D = false) = P(A = true, B = False, D = false) / P(D = false) = \\
+d) P(C = true, D = false | B = false) = P(C = true) * P(D = False | B  = False) \\
+e) P(B = true, C = false, D = true | A = false) = 0.5 * 0.2 * 0.6 = .06 
+% This problem is confusing me a bit
+\end{solution}
+
 \end{document}
